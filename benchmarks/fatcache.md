@@ -130,6 +130,54 @@ echo "Operations/s: " . ($items/($end-$start)) . "\n";
 
 Equal to Code 1 but with the line of get uncommented.
 
+**Code 3**
 
+Results
+------------
 
+**Code 1**
 
+<table>
+  <tr>
+    <th>Number of items</th>
+    <th>Start time</th>
+    <th>Final time</th>
+    <th>Time/s</th>
+    <th>Operations/s</th>
+  </tr>
+  <tr>
+    <td>100K</td>
+    <td>1361323435</td>
+    <td>1361323448</td>
+    <td>13</td>
+    <td>~7.7K</td>
+  </tr>
+  <tr>
+    <td>1M</td>
+    <td>1361323670</td>
+    <td>1361323795</td>
+    <td>125</td>
+    <td>8K</td>
+  </tr>  
+</table>
+
+**Code 2**
+
+<table>
+  <tr>
+    <th>Number of items</th>
+    <th>Start time</th>
+    <th>Final time</th>
+    <th>Time/s</th>
+    <th>Operations/s</th>
+  </tr>
+  <tr>
+    <td>100K</td>
+    <td>1361324006</td>
+    <td>1361324030</td>
+    <td>13</td>
+    <td>~8.3K</td>
+  </tr>
+</table>
+
+Note: ~8.3K means 4.15K sets and 4.15 gets
