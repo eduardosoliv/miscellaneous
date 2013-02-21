@@ -132,6 +132,49 @@ Equal to Code 1 but with the line of get uncommented.
 
 **Code 3**
 
+The purpose of this code is expalined later.
+
+```php
+<?php
+ 
+$m = new Memcached();
+$m->addServer('localhost', 11211, 33);
+ 
+$items = 500000;
+$keysToGet = array();
+ 
+for ($i = 1; $i <= $items; ++$i) {
+    $key = md5(rand());
+    $value = md5(rand()). md5(rand()) . md5(rand()) . md5(rand()) . md5(rand());
+    $m->set($key, $value, rand(60, 600));
+    if (rand(1,10) == 1) {
+        $keysToGet[] = $key;
+    }
+}
+ 
+echo "Sleeping...\n";
+sleep(10); // give enough time to flush to disk
+ 
+// add more keys to replace the hot keys inserted before
+for ($i = 1; $i <= $items; ++$i) {
+    $key = md5(rand());
+    $value = md5(rand()). md5(rand()) . md5(rand()) . md5(rand()) . md5(rand());
+    $m->set($key, $value, rand(60, 600));
+}
+ 
+$start = time();
+foreach ($keysToGet as $key) {
+    $m->get($key);
+}
+$end = time();
+ 
+echo "\nSummary\n";
+echo "Items: " . count($keysToGet) . "\n";
+echo "Start time: $start\n";
+echo "End time: $end\n";
+echo "Operations/s: " . (count($keysToGet)/($end-$start)) . "\n";
+```
+
 Results
 ------------
 
@@ -181,3 +224,37 @@ Results
 </table>
 
 Note: ~8.3K means 4.15K sets and 4.15 gets
+
+**Code 3**
+
+Fatcache write in bulk, so get's right after set can hit data on memory. So the code 3 goal is to try to give time to flush all to disk, write more data to replace the hot data on memory and then get.
+
+<table>
+  <tr>
+    <th>Number of items</th>
+    <th>Start time</th>
+    <th>Final time</th>
+    <th>Time/s</th>
+    <th>Operations/s</th>
+  </tr>
+  <tr>
+    <td>~50K</td>
+    <td>1361324740</td>
+    <td>1361324779</td>
+    <td>13</td>
+    <td>~1.3K</td>
+  </tr>
+</table>
+
+Conclusions
+------------
+
+Fatcache behavas very well on writting due to batched writes:
+
+> To minimize the number of small, random writes, fatcache treats the SSD as a log-structured object store. All writes are aggregated in memory and written to the end of the circular log in batches - usually multiples of 1 MB.
+
+So for a item with a key of 32 chars and a value of 160 chars in a inferior server more than 8K/s can be expected, around 700M a day.
+
+For reading ~ 1/8 of the performance of writting can be expected, around 1K/s and 86M a day.
+
+Fatache can be easily distributed like memcache using hashing of key, a naive approach of module or a more reliable way like consistent hashing.
