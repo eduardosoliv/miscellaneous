@@ -4,7 +4,7 @@ Handler Socket
 Introduction
 ------------
 
-At August of 2012 i step over Handler Socket:
+At August of 2012 I step over Handler Socket:
 
 "HandlerSocket is a MySQL plugin that implements a NoSQL protocol for MySQL. This allows applications to communicate more directly with MySQL storage engines, without the overhead associated with using SQL. This includes operations such as parsing and optimizing queries, as well as table handling operations (opening, locking, unlocking, closing). As a result, using HandlerSocket can provide much better performance for certain applications that using normal SQLapplication protocols."
 
@@ -37,7 +37,7 @@ Interesting so I google a little and found a [blog post of the author](http://yo
 
 The value of qps (querys per second) is so high because data fit in innodb buffer pool, so is CPU bounded instead of IO bounded.
 
-So i runned some benchmarks, because i wanted to test in a more common environment, that data don't fit on memory just indexes.
+So i runned some benchmarks, because I wanted to test in a more common environment: not all data don't fit on memory, indexes fit on memory.
 
 Environment
 ------------
@@ -46,9 +46,9 @@ I installed Percona Server and enabled HandlerSocket with [default configuratin]
 
 I had a table with 15 columns and 5 million rows, indexes fit on innodb buffer pool the full data data no. I expected a smaller difference that 7x more. Because would be IO bound, and Amazon EC2 don't excel on IO.
 
-So i runned 2 PHP's one using handlersocket and another PHP mysql common functions (not mysqli). PHP generate a random number between 1 and 5M and then get email by id. This was done in a while of 100K iterations.
+So i runned 2 PHP's one using handlersocket and another PHP mysql common functions (not mysqli). PHP generate a random number between 1 and 5M and then get email (just one column of the 15) by ID (primary key). This was done in a while of 100K iterations.
 
-To communicate with HandlerSocket at PHP i installed and used [PHP HandlerSocket](http://code.google.com/p/php-handlersocket/).
+To communicate with HandlerSocket at PHP I installed and used [PHP HandlerSocket](http://code.google.com/p/php-handlersocket/).
 
 Results
 ------------
