@@ -27,7 +27,7 @@ More info
 ------------
 
 I used PHP to run the tests and too ways of accessing CouchDB:
-- [PHP CouchDB extension[(https://github.com/akissa/php-couchdb)
+- [PHP CouchDB extension](https://github.com/akissa/php-couchdb)
 - Curl
 
 The data being inserted is data about users. All the time to fetch data from MySQL was subtracted from benchmarks. The tests were run several times until consistent timing was achieved. 
@@ -59,7 +59,7 @@ In this benchmark i just ran a single PHP client sending data to CouchDB using p
   </tr>  
 </table>
 
-CouchDB reported that 1M users occupies 7.8GB, after "ask" CouchDB to compact it passed do 1.6GB. Almost double it occupies on MySQL.
+CouchDB reported that 1M users occupies 7.8GB, after "ask" CouchDB to compact it passed do 1.6GB. Almost double it occupied on MySQL.
 
 #### Put bulks
 
@@ -143,7 +143,7 @@ With one client of PHP using curl the best i got was ~70 documents retrieved per
 
 Running 10 clients I got around 40 documents/s each, so a total of 400 documents/s.
 
-Then I hadded 4 volumes to the server and with raid 0, with the same clients I got a total of 910 documents/s.
+Then I added 4 volumes to the server and raid 0, with the same clients I got a total of 910 documents/s.
 
 Compacting
 ------------
@@ -168,6 +168,7 @@ What I didn't like in CouchDB
 - No automatic compaction;
 - Huge space on Disk (even after compacting), space is cheap but then requires more IO to fetch data, more information on a [ticket](https://issues.apache.org/jira/browse/COUCHDB-1092) on JIRA;
 - No partial updates (I know the way it works it needs to fetch the document and update as a whole, but a command could be provided to handle that);
-- Not managing and caching data, leaving all the work to OS, doesn't work good.
+- Not managing and caching data, leaving all the work to OS, doesn't work good;
+- Performance is far far from great.
 
 I found an old post about [10 Annoying Things About CouchDB](http://www.paperplanes.de/2010/7/26/10_annoying_things_about_couchdb.html).
