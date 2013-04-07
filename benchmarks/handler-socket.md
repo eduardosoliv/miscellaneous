@@ -133,6 +133,8 @@ Update
 
 MySQL 5.6 supports [Memcache protocol to access InnoDB tables](http://dev.mysql.com/tech-resources/articles/whats-new-in-mysql-5.6.html#nosql), probably inspired in Handler Socket, but using Memcache protocol is much better idea, making the adoption of this new feature much easier to developers that Handler Socket.
 
+I found a benchmarkabout memcache protocol to access InnoDB tables at [MySQL performance blog](http://www.mysqlperformanceblog.com/2013/03/29/mysql-5-6-innodb-memcached-plugin-as-a-caching-layer/). I was quite disappointed with the results, anyway a benchmark with multiple clients and information about system load would be more interesting and more close to reality.
+
 
 
 
