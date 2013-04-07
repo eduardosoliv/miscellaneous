@@ -37,7 +37,7 @@ Interesting so I google a little and found a [blog post of the author](http://yo
 
 The value of qps (querys per second) is so high because data fit in innodb buffer pool, so is CPU bounded instead of IO bounded.
 
-So i runned some benchmarks, because I wanted to test in a more common environment: not all data don't fit on memory, indexes fit on memory.
+So i runned some benchmarks, because I wanted to test in a more common environment: not all data fit on memory just indexes fit on memory.
 
 Environment
 ------------
