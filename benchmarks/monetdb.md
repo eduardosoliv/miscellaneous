@@ -28,6 +28,20 @@ I used AWS Cloud, you can have a look on more detail about instance types in [he
     <td>15</td>
     <td>High</td>
   </tr>
+  <tr>
+    <td>High-Memory Double Extra Large Instance</td>
+    <td>m2.2xlarge</td>
+    <td>13 EC2 Compute Units (4 virtual cores with 3.25 EC2 Compute Units each)</td>
+    <td>34.2</td>
+    <td>High</td>    
+  </tr>
+  <tr>
+    <td>High I/O Quadruple Extra Large Instance</td>
+    <td>hi1.4xlarge</td>
+    <td>35 EC2 Compute Units (16 virtual cores)</td>
+    <td>60.5</td>
+    <td>Very High</td>
+  </tr>  
 </table>
 
 Data
