@@ -63,7 +63,7 @@ Number of rows: 640M so around 121GB on MySQL.
 
 On MonetDB it occupies **77GB**.
 
-I loaded the data using CSV, each CSV containing 10M rows taking between 1-2 minutes, the load of each CSV was single core.
+I loaded the data using CSV, each CSV containing 10M rows taking between 1-2 minutes, MonetDb couldn't use more than one core loading each CSV, so the faster way is to split in multiple CSV an load in parallel.
 
 Queries
 ------------
@@ -175,10 +175,10 @@ Conclusions
 
 MonetDB have great performance, it scales well vertically, more hardware faster queries. Is simple to install and I didn't need to make any configuration, you don't have to careful choose indexes and so on. It excells in queries with group bys like Q3 and Q4, you can see it using all the cores of S3 (16 cores).
 
-Don't have any built-in shard neither replication (master - slave would be nice), documentation is poor but mailing list is quite active. It have all the disadvantages inherent of column oriented design, eg: single inserts and updates are expensive, not good concurrency and througput.
+Don't have any built-in shard neither replication (master - slave would be nice), documentation is poor but mailing list is quite active. It have all the disadvantages inherent of column oriented design, eg: single inserts and updates are expensive, don't handle well high concurrency.
 
-The client is important too, I justed test the PHP client and it have poor performance, I made some tests bringing a lot of rows, I run the code in the same server (networking is not the problem), and running it on MonetDb CLI take almost half the time of using PHP client. I found that MonetDb had a client as module of PHP with good performance, but was deprecated becase was difficult to maintain. If you plan to use MonetDb first check if the client performance suit your needs, if you are using MonetDb for reports probably will not be a problem (result set probably will be small because will be aggregated before).
+The client is important too, I justed test the PHP client and it disappointed me (performance and code), I made some tests bringing a lot of rows, I run the PHP code in the same server, and running it on MonetDb CLI take almost half the time of using PHP client. I found that MonetDb had a client as module of PHP with good performance, but was deprecated becase was difficult to maintain. If you plan to use MonetDb first check if the client performance suit your needs, if you are using MonetDb for reports probably will not be a problem (result set probably will be small because will be aggregated before).
 
-I like MonetDB, I would like to see it as a commercial product rather than an academic project. With some more features on top of it, good documentation and clientes it would rock.
+I like MonetDB, I would like to see it as a commercial product rather than an academic project. With some more features on top of it, good documentation and good clients, it would rock. MonetDB as a SaaS would be great too.
 
 
