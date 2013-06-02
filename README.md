@@ -1,6 +1,8 @@
 Miscellaneous
 =============================
 
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/6ca5e52989fdd36e216cbbe6c0685408 "githalytics.com")](http://githalytics.com/entering/miscellaneous)
+
 Just a miscellaneous repository, I'm placing this on a repository, because I need a place too keep this stuff (to avoid lost it) and can be useful for others. Forgive my English but I'm not a native speaker.
 
 21-Feb-2013 [Fatcache benchmark](https://github.com/entering/miscellaneous/blob/master/benchmarks/fatcache.md)
