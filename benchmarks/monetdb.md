@@ -172,6 +172,8 @@ Don't have any built-in shard neither replication (master - slave would be nice)
 
 The client is important too, I justed test the PHP client and it have poor performance, I made some tests bringing a lot of rows, I run the code in the same server (networking is not the problem), and running it on MonetDb CLI take almost half the time of using PHP client. I found that MonetDb had a client as module of PHP with good performance, but was deprecated becase was difficult to maintain. If you plan to use MonetDb first check if the client performance suit your needs, if you are using MonetDb for reports probably will not be a problem (result set probably will be small because will be aggregated before).
 
+When I found MonetDB was so difficult to get any information on Web about it, almost no one using it (at least writting about it). I found [Analyzing air traffic performance with InfoBright and MonetDB](http://www.mysqlperformanceblog.com/2009/10/02/analyzing-air-traffic-performance-with-infobright-and-monetdb/) and [Quick comparison of MyISAM, Infobright, and MonetDB](http://www.mysqlperformanceblog.com/2009/09/29/quick-comparison-of-myisam-infobright-and-monetdb/) both from 2009. MonetDB team would win getting more involved with community, like: move code and documentation to Github and have a technical blog about it.
+
 I like MonetDB, I would like to see it as a commercial product rather than an academic project. With some more features on top of it, good documentation and clientes it would rock.
 
 
