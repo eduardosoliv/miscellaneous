@@ -1,6 +1,8 @@
 MonetDB
 =============================
 
+<img align="right" src="http://dev.monetdb.org/imgs/monetdb-final-500.png" alt="MonetDB Logo" width="125" height="51"></img>
+
 Introduction
 ------------
 
