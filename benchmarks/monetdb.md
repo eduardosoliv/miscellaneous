@@ -182,4 +182,4 @@ The client is important too, I justed test the PHP client and it disappointed me
 I like MonetDB, I would like to see it as a commercial product rather than an academic project, but kept as open source, with a community version and an enterprise edition with some more features on top of it.
 But even the community version needs better documentation and better clients. MonetDB as a SaaS would be great too.
 
-
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/6ca5e52989fdd36e216cbbe6c0685408 "githalytics.com")](http://githalytics.com/entering/miscellaneous)
