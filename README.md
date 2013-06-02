@@ -8,3 +8,5 @@ Just a miscellaneous repository, I'm placing this on a repository, because i nee
 28-Feb-2013 [Handler Socket benchmark](https://github.com/entering/miscellaneous/blob/master/benchmarks/handler-socket.md) (From August of 2012)
 
 ??-Mar-2013 [CouchDB benchmark](https://github.com/entering/miscellaneous/blob/master/benchmarks/couchdb.md)
+
+??-May-2013 [MonetDB benchmark](https://github.com/entering/miscellaneous/blob/master/benchmarks/monetdb.md)
