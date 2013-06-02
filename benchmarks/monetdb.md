@@ -179,7 +179,7 @@ Don't have any built-in shard neither replication (master - slave would be nice)
 
 The client is important too, I justed test the PHP client and it disappointed me (performance and code), I made some tests bringing a lot of rows, I run the PHP code in the same server, and running it on MonetDb CLI take almost half the time of using PHP client. I found that MonetDb had a client as module of PHP with good performance, but was deprecated becase was difficult to maintain. If you plan to use MonetDb first check if the client performance suit your needs, if you are using MonetDb for reports probably will not be a problem (result set probably will be small because will be aggregated before).
 
-I like MonetDB, I would like to see it as a commercial product rather than an academic project, but keeping as open source, with a community version and an enterprise edition with some more features on top of it.
+I like MonetDB, I would like to see it as a commercial product rather than an academic project, but kept as open source, with a community version and an enterprise edition with some more features on top of it.
 But even the community version needs better documentation and better clients. MonetDB as a SaaS would be great too.
 
 
