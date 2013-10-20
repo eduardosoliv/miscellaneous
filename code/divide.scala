@@ -1,6 +1,3 @@
-#!/bin/sh
-exec scala "$0" "$@"
-!#
 /**
  * Divide without using / or *
  *
