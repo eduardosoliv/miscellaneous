@@ -197,7 +197,7 @@ When I found MonetDB was so difficult to get any information on Web about it, al
 Conclusions
 ------------
 
-MonetDB have great performance, it scales well vertically, more hardware faster queries. Is simple to install and I didn't need to make any configuration, you don't have to careful choose indexes and so on. It excells in queries with group bys like Q3 and Q4, you can see it using all the cores of S3 (16 cores).
+MonetDB have great performance, it scales well vertically, more hardware faster queries. Is simple to install and I didn't need to make any configuration, you don't have to careful choose indexes and so on. It excells in queries with group bys like Q3 and Q4, I could see it using all the cores of S3 (16 cores).
 
 Don't have any built-in shard neither replication (master - slave would be nice), documentation is poor but mailing list is quite active. It have all the disadvantages inherent of column oriented design, eg: single inserts and updates are expensive, don't handle well high concurrency.
 
