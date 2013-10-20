@@ -7,7 +7,7 @@ exec scala "$0" "$@"
  * Eg: ./divide.sh 17 4
  */
 
-object ScalaApp {
+object Divide {
   def main(args: Array[String]) {
     if (args.length != 2) {
       println("Use ./divide.sh <numerator> <denominator>")
