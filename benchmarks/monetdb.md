@@ -68,13 +68,37 @@ I loaded the data using CSV, each CSV containing 10M rows taking between 1-2 min
 Queries
 ------------
 
-Q1) select count(*) from summary where gender = 'M'; /* Gender have 3 options M F N (unknow) */
+Q1)
+```sql
+SELECT count(*)
+FROM summary
+WHERE gender = 'M'; -- Gender have 3 options M F N (unknow)
+```
 
-Q2) select count(*) from summary where age = 'C' and sent > 100; /* age have low cardinality 5-6 segments */
+Q29
+```sql
+-- age have low cardinality 7 segments
+SELECT count(*)
+FROM summary
+WHERE age = 'C' AND sent > 100;
+```
 
-Q3) select provider, count(*) as cnt from summary group by provider order by cnt desc; /* provider have low cardinality, and is a small string, like hotmail, gmail, etc. */
+Q3)
+```sql
+-- provider have low cardinality, and is a small string, like hotmail, gmail, etc.
+SELECT provider, count(*) as cnt
+FROM summary
+GROUP BY provider
+ORDER BY cnt desc;
+```
 
-Q4) select parent_id, gender, sum(clicks) as tc from summary group by parent_id, gender order by tc desc limit 10;
+Q4)
+```sql
+SELECT parent_id, gender, sum(clicks) as tc
+FROM summary
+GROUP BY parent_id, gender
+ORDER BT tc desc limit 10;
+```
 
 Results
 ------------
