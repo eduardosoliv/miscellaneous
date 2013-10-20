@@ -6,7 +6,7 @@ MonetDB - column-store pioneers
 Introduction
 ------------
 
-On October/November of 2012 I was looking for a column oriented DB and I found [MonetDB the column-store pioneer](http://www.monetdb.org/Home) at the time I was evaluating several tecnhologies, some just reading anothers like InfiniDB benchmarking. So I compare InfiniDB against MonetDB, but I will just post MonetDB results (that overpass InfiniDB hugely).
+On end of 2012 I was looking for a column oriented DB and I found [MonetDB the column-store pioneer](http://www.monetdb.org/Home) at the time I was evaluating several tecnhologies, some just reading anothers like InfiniDB benchmarking. So I compare InfiniDB against MonetDB, but I will just post MonetDB results (that overpass InfiniDB hugely).
 
 MonetDB is not well known, I never heard about it, it is not a real commercial product but more an academic project, a great project.
 
