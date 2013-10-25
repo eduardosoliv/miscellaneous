@@ -247,7 +247,7 @@ Fatcache write in bulk, so get's right after set can hit data on memory. So the 
 Conclusions
 ------------
 
-Fatcache behavas very well on writting due to batched writes:
+Fatcache behaves very well on writting due to batched writes:
 
 > To minimize the number of small, random writes, fatcache treats the SSD as a log-structured object store. All writes are aggregated in memory and written to the end of the circular log in batches - usually multiples of 1 MB.
 
