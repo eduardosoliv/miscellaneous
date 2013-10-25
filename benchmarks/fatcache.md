@@ -93,9 +93,7 @@ real  1m31.369s
 user	1m31.210s
 sys	0m0.012s
 ```
- 
- [Simple benchmark](http://duguo.org/kb/server/test/simple_linux_benchmark.html)
- 
+
 Code
 ------------
 
@@ -132,7 +130,7 @@ Equal to Code 1 but with the line of get uncommented.
 
 **Code 3**
 
-The purpose of this code is expalined later.
+The purpose of this code is explained later.
 
 ```php
 <?php
