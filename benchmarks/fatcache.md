@@ -93,9 +93,7 @@ real  1m31.369s
 user	1m31.210s
 sys	0m0.012s
 ```
- 
- [Simple benchmark](http://duguo.org/kb/server/test/simple_linux_benchmark.html)
- 
+
 Code
 ------------
 
@@ -132,7 +130,7 @@ Equal to Code 1 but with the line of get uncommented.
 
 **Code 3**
 
-The purpose of this code is expalined later.
+The purpose of this code is explained later.
 
 ```php
 <?php
@@ -249,7 +247,7 @@ Fatcache write in bulk, so get's right after set can hit data on memory. So the 
 Conclusions
 ------------
 
-Fatcache behavas very well on writting due to batched writes:
+Fatcache behaves very well on writting due to batched writes:
 
 > To minimize the number of small, random writes, fatcache treats the SSD as a log-structured object store. All writes are aggregated in memory and written to the end of the circular log in batches - usually multiples of 1 MB.
 
