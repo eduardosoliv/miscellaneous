@@ -2,31 +2,48 @@ import org.scalatest.FunSuite
 
 class RationalTest extends FunSuite {
   test("Add rationals") {
-    val r = new Rational(6, 12) + new Rational(24, 12)
-    assert(r.numer == 5)
-    assert(r.denom == 2)
+    assert(new Rational(6, 12) + new Rational(24, 12) === new Rational(5, 2))
   }
 
   test("Add integer to rational") {
-    val r = new Rational(6, 12) + 2
-    assert(r.numer == 5)
-    assert(r.denom == 2)
+    assert(new Rational(6, 12) + 2 === new Rational(5, 2))
   }
 
   test("Subtract rationals") {
-    val r = new Rational(6, 12) - new Rational(24, 12)
-    assert(r.numer == -3)
-    assert(r.denom == 2)
+    assert(new Rational(6, 12) - new Rational(24, 12) === new Rational(-3, 2))
   }
 
   test("Subtract integer from rational") {
-    val r = new Rational(18, 3) - 2
-    assert(r.numer == 4)
-    assert(r.denom == 1)
+    assert(new Rational(18, 3) - 2 === new Rational(4, 1))
+  }
+
+  test("Multiply rationals") {
+    assert(new Rational(5, 10) * new Rational(3) === new Rational(3, 2))
+  }
+
+  test("Multiply rational with integer") {
+    assert(new Rational(5, 10) * 3 === new Rational(3, 2))
   }
 
   test("ToString of ration") {
-    val r = new Rational(18, 3)
-    assert("6/1" == r.toString)
+    assert("6/1" === new Rational(18, 3).toString)
+  }
+
+  test("Equals") {
+    assert(new Rational(10, 3) === new Rational(10, 3))
+  }
+
+  test("Greater than operator") {
+    assert(new Rational(26, 3) > new Rational(18, 3))
+  }
+
+  test("Less than operator") {
+    assert(new Rational(15, 3) < new Rational(18, 3))
+  }
+
+  test("Less just accepts rational") {
+    intercept[IllegalArgumentException] {
+      new Rational(15, 3) < 5
+    }
   }
 }
