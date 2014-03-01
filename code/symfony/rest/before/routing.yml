@@ -1,0 +1,3 @@
+esorest_demo_hello:
+    pattern:  /hello/{name}
+    defaults: { _controller: ESORESTDemoBundle:Default:index }
