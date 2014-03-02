@@ -1,1 +1,14 @@
-{"talks":[{"title":"Build REST APIs with Symfony2","start_date":"2014-03-08T16:10:00+0000","abstract":"Learn by example how to build a REST API using Symfony 2 ...","speaker":{"name":"Eduardo Oliveira","bio":"bio","why_me":"..."}}]}
+{
+  "talks": [
+      {
+        "title":"Build REST APIs with Symfony2",
+        "start_date":"2014-03-08T16:10:00+0000",
+        "abstract":"Learn by example how to build a REST API using Symfony 2 ...",
+        "speaker": {
+          "name":"Eduardo Oliveira",
+          "bio":"bio",
+          "why_me":"..."
+        }
+      }
+  ]
+}
