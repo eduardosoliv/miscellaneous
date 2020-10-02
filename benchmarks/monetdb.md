@@ -55,15 +55,19 @@ I used AWS Cloud, you can have a look on more detail about instance types in [he
 Data
 ------------
 
-Table with 33 columns, with 20 columns as integers, 8 as varchar, 4 float and 1 datetime.
+Table with 33 columns:
+- with 20 columns as integers
+- 8 as varchar
+- 4 float
+- 1 datetime
 
-With data on MySQL running show table status, the table have have a average row length of 203 bytes.
+Rows: 640M
 
-Number of rows: 640M so around 121GB on MySQL.
+Data in MySQL:
+- average row length of 203 bytes (usingshow table status)
+- size: ~121GB
 
-On MonetDB it occupies **77GB**.
-
-I loaded the data using CSV, each CSV containing 10M rows taking between 1-2 minutes, MonetDb couldn't use more than one core loading each CSV, so the faster way is to split in multiple CSV an load in parallel.
+MonetDB: 77GB (due to compression)
 
 Queries
 ------------
